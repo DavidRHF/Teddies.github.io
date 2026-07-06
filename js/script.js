@@ -17,13 +17,18 @@ const menuBtn = $(".mobile-menu-btn");
 const navLinks = $(".nav-links");
 
 if (menuBtn && navLinks) {
+
     menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+        const isOpen = navLinks.classList.toggle("active");
+
+        // accessibility improvement
+        menuBtn.setAttribute("aria-expanded", isOpen);
     });
 
     $$(".nav-links a").forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", false);
         });
     });
 }
