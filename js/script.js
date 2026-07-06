@@ -176,34 +176,49 @@ links.forEach(link => {
    CUSTOM CURSOR SYSTEM (PRODUCTION VERSION)
 ========================================================== */
 
-const cursor = document.querySelector(".custom-cursor");
 
-if (cursor) {
+document.addEventListener("DOMContentLoaded", () => {
 
-    // move cursor
+    const cursor = document.querySelector(".custom-cursor");
+
+    if (!cursor) return;
+
+    // follow mouse
     document.addEventListener("mousemove", (e) => {
         cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
     });
 
-    // hover effects on interactive elements
-    const hoverTargets = document.querySelectorAll(
-        "a, button, .btn, input, textarea, select"
-    );
+    // helper function
+    const setCursor = (emoji) => {
+        cursor.textContent = emoji;
+    };
 
-    hoverTargets.forEach(el => {
+    // default
+    setCursor("🍯");
 
-        el.addEventListener("mouseenter", () => {
-            cursor.classList.add("cursor-hover");
-        });
+    // hover targets + emoji mapping
+    const map = [
+        { selector: "a", emoji: "🐻" },
+        { selector: "button, .btn", emoji: "🍔" },
+        { selector: ".special, .highlight", emoji: "⭐" },
+        { selector: "img", emoji: "👀" }
+    ];
 
-        el.addEventListener("mouseleave", () => {
-            cursor.classList.remove("cursor-hover");
+    map.forEach(item => {
+
+        document.querySelectorAll(item.selector).forEach(el => {
+
+            el.addEventListener("mouseenter", () => {
+                setCursor(item.emoji);
+            });
+
+            el.addEventListener("mouseleave", () => {
+                setCursor("🍯");
+            });
+
         });
 
     });
 
-}
-
-
-
+});
