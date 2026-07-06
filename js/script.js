@@ -28,14 +28,21 @@ if (menuBtn && navLinks) {
     });
 }
 
-/* ==========================================================
-   STICKY NAV (CLEAN VERSION)
-========================================================== */
+/*Better scroll system*/
 
-const navbar = $(".navbar");
+const revealElements = $$(".card, .testimonial, .menu-item, .section");
 
-if (navbar) {
-    window.addEventListener("scroll", () => {
-        navbar.classList.toggle("scrolled", window.scrollY > 50);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
     });
-}
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(el => {
+    el.classList.add("reveal");
+    observer.observe(el);
+});
