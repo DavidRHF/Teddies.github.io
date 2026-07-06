@@ -104,3 +104,29 @@ if (filterButtons.length > 0) {
         });
     });
 }
+
+/* ==========================================================
+   CONTACT FORM (FRONT-END ONLY)
+========================================================== */
+
+const form = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+if (form) {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+
+        if (name.trim() === "") {
+            formMessage.textContent = "Please enter your name.";
+            formMessage.style.color = "red";
+            return;
+        }
+
+        formMessage.textContent = `Thanks ${name}! Your reservation request has been received. We'll contact you soon.`;
+        formMessage.style.color = "green";
+
+        form.reset();
+    });
+}
