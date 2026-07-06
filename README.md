@@ -5,7 +5,7 @@ A production-ready, responsive restaurant website template designed for small bu
 ---
 
 ## Live Demo
-Add your Netlify link here
+[Teddies](https://teddiestestsite.netlify.app/)
 
 ---
 
@@ -53,8 +53,7 @@ This project simulates a real-world restaurant website focused on:
 
 ## Deployment
 
-*Hosted using Netlify*
-[Teddies](https://teddiestestsite.netlify.app/)
+Hosted using Netlify
 
 ---
 
