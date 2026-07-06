@@ -856,6 +856,31 @@ input:focus, textarea:focus, select:focus{
 }
 
 
+/* =========================
+   CUSTOM CURSOR SYSTEM
+========================= */
+
+body {
+    cursor: none;
+}
+
+/* main cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.08s ease, font-size 0.15s ease;
+}
+
+/* hover grow effect */
+.cursor-hover {
+    font-size: 32px;
+    transform: translate(-50%, -50%) scale(1.2);
+}
 
 
 
