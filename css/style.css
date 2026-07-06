@@ -850,7 +850,10 @@ input:focus, textarea:focus, select:focus{
     transform:translateY(0);
 }
 
-
+.nav-links a.active {
+    color: #8B5E3C;
+    font-weight: 700;
+}
 
 
 
