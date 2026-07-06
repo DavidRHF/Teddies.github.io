@@ -473,3 +473,211 @@ color:var(--primary);
 margin-bottom:15px;
 
 }
+
+/* ==========================================================
+   SPECIAL PREVIEW SECTION
+========================================================== */
+
+.special-preview{
+    background:linear-gradient(135deg,#fff, #fff7ec);
+}
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.special-image{
+    font-size:6rem;
+    text-align:center;
+}
+
+/* ==========================================================
+   STORY SECTION
+========================================================== */
+
+.story{
+    background:white;
+    text-align:center;
+}
+
+.story p{
+    max-width:850px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.text-link{
+    color:var(--primary);
+    font-weight:700;
+    display:inline-block;
+    margin-top:10px;
+}
+
+.text-link:hover{
+    text-decoration:underline;
+}
+
+/* ==========================================================
+   TESTIMONIALS
+========================================================== */
+
+.testimonials{
+    background:var(--cream);
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.testimonial{
+    background:white;
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.testimonial:hover{
+    transform:translateY(-5px);
+}
+
+.testimonial p{
+    font-style:italic;
+}
+
+/* ==========================================================
+   HOURS SECTION
+========================================================== */
+
+.hours{
+    background:white;
+}
+
+.hours-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    margin-top:40px;
+}
+
+.hours ul li{
+    margin-bottom:10px;
+}
+
+/* ==========================================================
+   CTA SECTION
+========================================================== */
+
+.cta{
+    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+    color:white;
+    text-align:center;
+}
+
+.cta p{
+    color:white;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+    background:var(--dark);
+    color:white;
+    padding:70px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+}
+
+footer h3{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+footer ul li{
+    margin-bottom:10px;
+}
+
+footer a:hover{
+    color:var(--accent);
+}
+
+.copyright{
+    text-align:center;
+    margin-top:50px;
+    opacity:.7;
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content,
+.section{
+    animation:fadeUp .8s ease both;
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px){
+
+    h1{
+        font-size:3rem;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .split{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:var(--shadow);
+        border-radius:12px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+    }
+
+}
