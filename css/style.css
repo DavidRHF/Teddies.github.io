@@ -723,7 +723,18 @@ footer a:hover{
     color:var(--forest);
 }
 
+/* ==========================================================
+   SPECIALS PAGE
+========================================================== */
 
+.special-image{
+    font-size:6rem;
+    text-align:center;
+}
+
+.cta{
+    text-align:center;
+}
 
 
 
