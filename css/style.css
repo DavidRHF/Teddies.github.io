@@ -882,5 +882,18 @@ body {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
+body {
+    cursor: none;
+}
 
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.08s ease;
+}
 
